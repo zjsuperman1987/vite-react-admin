@@ -1,0 +1,57 @@
+@backColor: #d1e3fa;
+
+.sider {
+    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.35);
+    // min-height: 100vh;
+    .trigger {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 0 24px;
+        font-size: 20px;
+        cursor: pointer;
+        line-height: 64px;
+        transition: all 0.3s;
+        svg {
+          color: white;
+        }
+        &.fold {
+            transform: rotate(180deg);
+        }
+        &:hover {
+            background-color: @backColor;
+        }
+    }
+    .menuLogo {
+        height: 64px;
+        background-color: #001529;
+        &.hide {
+            a {
+                justify-content: center;
+                div {
+                    overflow: hidden;
+                    opacity: 0;
+                    width: 0;
+                }
+            }
+        }
+        a {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            img {
+                width: 40px;
+                flex: none;
+                margin-left: 12px;
+            }
+            div {
+                color: #fff;
+                width: 100%;
+                font-size: 24px;
+                padding-left: 10px;
+                white-space: nowrap;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
